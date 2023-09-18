@@ -1,13 +1,14 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { PhotoIcon } from "@heroicons/react/24/outline";
+import { Photo, PhotoIcon } from "@heroicons/react/24/outline";
 import CategoryLabel from "./Category";
 import { EditorTextParser } from ".";
 import { format, parseISO } from "date-fns";
 
-const PostCard = ({
+const PostList = ({
   post,
   aspect,
   minimal,
@@ -124,5 +125,3 @@ const PostCard = ({
     </>
   );
 };
-
-export default PostCard;
