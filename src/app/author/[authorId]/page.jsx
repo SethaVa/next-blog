@@ -14,11 +14,12 @@ const Author = async ({ params }) => {
   const author = await getAuthorById(authorId);
 
   const posts = await getPostByAuthorId(authorId);
+  console.log("author", posts);
 
   return (
     <>
-      <Container className="!pt-0">
-        <div className="mx-auto max-w-screen-md ">
+      <Container>
+        <div className="mx-auto max-w-screen-md mt-16">
           <div className="flex justify-center">
             <div className="relative mt-1 h-24 w-24 flex-shrink-0 ">
               {author.photo && (
@@ -40,7 +41,7 @@ const Author = async ({ params }) => {
           </h1>
 
           <div className="flex justify-center">
-            <p className="text-white text-lg w-2/3 text-center">{author.bio}</p>
+            <p className="text-lg w-2/3 text-center text-black">{author.bio}</p>
           </div>
         </div>
         <div className="mt-10 grid gap-10 md:grid-cols-2 lg:gap-10 xl:grid-cols-3 ">

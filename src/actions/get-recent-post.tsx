@@ -1,7 +1,7 @@
 const getRecentPosts = async (): Promise<any> => {
   const recentPosts = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/posts/front/get-recent-posts`,
-    { cache: "no-cache" }
+    { next: { revalidate: 3600 } }
   );
 
   if (!recentPosts.ok) {

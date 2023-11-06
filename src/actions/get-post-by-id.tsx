@@ -1,7 +1,7 @@
 const getPostById = async (postId): Promise<any> => {
   const post = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/posts/${postId}`,
-    { cache: "no-cache" }
+    { next: { revalidate: 3600 } }
   );
 
   if (!post.ok) {

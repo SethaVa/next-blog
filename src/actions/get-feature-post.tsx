@@ -3,7 +3,7 @@ import { Post } from "../../types";
 const getFeaturePosts = async (): Promise<Post> => {
   const featuredPosts = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/posts/front/get-featured-posts`,
-    { cache: "no-cache" }
+    { next: { revalidate: 3600 } }
   );
 
   if (!featuredPosts.ok) {

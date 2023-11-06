@@ -1,7 +1,7 @@
 const getPosts = async (): Promise<any> => {
   const posts = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/posts/front/get-posts`,
-    { cache: "no-cache" }
+    { next: { revalidate: 3600 } }
   );
 
   if (!posts.ok) {

@@ -3,7 +3,7 @@ import { Category } from "../../types";
 const URL = `${process.env.NEXT_PUBLIC_API_URL}/categories/front`;
 
 const getCategories = async (): Promise<Category> => {
-  const data = await fetch(`${URL}`);
+  const data = await fetch(`${URL}`, { next: { revalidate: 3600 } });
 
   if (!data.ok) {
     throw new Error("Failed to fetch data");

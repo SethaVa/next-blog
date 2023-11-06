@@ -12,8 +12,8 @@ import CategoryLabel from "@/components/Category";
 const PostDetail = ({ post }) => {
   return (
     <>
-      <Container className="!pt-0">
-        <div className="mx-auto max-w-screen-lg">
+      <Container>
+        <div className="mx-auto max-w-screen-lg mt-16">
           <div className="flex justify-start items-start space-x-3 text-left">
             <CategoryLabel categories={post.categories} />
           </div>
