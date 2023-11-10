@@ -1,5 +1,7 @@
 # Full Stack Blog App + Dashboard & CMS: Next.js 13 App Router, React, Tailwind, Redix-UI, Prisma, Mongodb, Cloudinary
 
+![app banner](https://raw.githubusercontent.com/SethaVa/react-portfolio/main/src/assets/blog-app.png?token=GHSAT0AAAAAACJUGAYQVXVXJ2XWYBKSWEGOZKOE6MQ)
+
 [Admin Dashboard](https://github.com/SethaVa/next-blog-admin-dashboard)
 
 This is a repository for a Full Stack Blog App + Dashboard & CMS: Next.js 13 App Router, React, Tailwind, Redix-UI, Prisma, Mongodb, Cloudinary
